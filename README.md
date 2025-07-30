@@ -1,4 +1,6 @@
-# SAMRank
+📌 This repository is a clone of the original [SAMRank](https://github.com/kangnlp/SAMRank) implementation from the EMNLP 2023 paper:
+
+# SAMRank 
 This code is for paper "[SAMRank: Unsupervised Keyphrase Extraction using Self-Attention Map in BERT and GPT-2](https://aclanthology.org/2023.emnlp-main.630)" 
 
 
@@ -46,3 +48,5 @@ If you use this code, please cite our paper:
     abstract = "We propose a novel unsupervised keyphrase extraction approach, called SAMRank, which uses only a self-attention map in a pre-trained language model (PLM) to determine the importance of phrases. Most recent approaches for unsupervised keyphrase extraction mainly utilize contextualized embeddings to capture semantic relevance between words, sentences, and documents. However, due to the anisotropic nature of contextual embeddings, these approaches may not be optimal for semantic similarity measurements. SAMRank as proposed here computes the importance of phrases solely leveraging a self-attention map in a PLM, in this case BERT and GPT-2, eliminating the need to measure embedding similarities. To assess the level of importance, SAMRank combines both global and proportional attention scores through calculations using a self-attention map. We evaluate the SAMRank on three keyphrase extraction datasets: Inspec, SemEval2010, and SemEval2017. The experimental results show that SAMRank outperforms most embedding-based models on both long and short documents and demonstrating that it is possible to use only a self-attention map for keyphrase extraction without relying on embeddings. Source code is available at https://github.com/kangnlp/SAMRank.",
 }
 ```
+# Mindmap
+The prototype code for **mindmap generation from context** can be found in [`mindmap.ipynb`](mindmap.ipynb).

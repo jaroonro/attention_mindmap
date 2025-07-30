@@ -34,6 +34,35 @@ with open('UGIR_stopwords.txt', "r") as f:
 
 stemmer = PorterStemmer()
 
+def get_geometric_mean(attention_map: torch.Tensor) -> torch.Tensor:
+    """
+    Compute the geometric mean of each column in a causal N×N attention map,
+    using counts = [N, N-1, ..., 1] instead of masking.
+    
+    Args:
+        attention_map (Tensor): shape (N, N)
+
+    Returns:
+        Tensor: shape (N,), geometric mean of each column
+    """
+    if not attention_map.is_floating_point():
+        attention_map = attention_map.float()
+
+    masked = attention_map.clone()
+    masked[masked == 0] = 1.0  # log(1) = 0, so does not affect sum
+
+    log_sum = torch.log(masked).sum(dim=0)
+
+    N = attention_map.size(0)
+    counts = torch.arange(N, 0, -1, dtype=attention_map.dtype, device=attention_map.device)
+
+    geo_mean = torch.where(
+        counts > 0,
+        torch.exp(log_sum / counts),
+        torch.zeros_like(counts)
+    )
+
+    return geo_mean
 
 
 def get_col_sum_token_level(attention_map):
@@ -251,7 +280,9 @@ def rank_short_documents(args, dataset, model, tokenizer):
 
     for data in tqdm(dataset):
         with torch.no_grad():
+  
             tokenized_text = tokenizer(data['text'], return_tensors='pt')
+ 
             outputs = model(**tokenized_text.to(device))
 
             attentions = outputs.attentions
@@ -295,7 +326,17 @@ def rank_short_documents(args, dataset, model, tokenizer):
                         final_tokens_score = global_attention_scores
                     elif args.mode == 'Proportional':
                         final_tokens_score = proportional_attention_scores
-
+                    elif args.mode == 'F1':
+                        # Harmonic mean: 2ab / (a + b)
+                        numerator = 2 * global_attention_scores * proportional_attention_scores
+                        denominator = global_attention_scores + proportional_attention_scores
+                        final_tokens_score = torch.where(denominator > 0, numerator / denominator, torch.zeros_like(denominator))
+                    elif args.mode == 'Geometric':
+                        # Geometric mean: sqrt(ab) we ignore sqrt
+                        product = global_attention_scores * proportional_attention_scores
+                        final_tokens_score = product
+                    if args.mode == 'Geo':
+                        final_tokens_score = global_attention_scores + proportional_attention_scores + get_geometric_mean(attention_map)
                     phrase_score_dict = {}
                     for phrase in candidates_indices.keys():
                         try:
@@ -351,6 +392,7 @@ def rank_long_documents(args, dataset, model, tokenizer):
 
     for data in tqdm(dataset):
         with torch.no_grad():
+
             tokenized_text = tokenizer(data['text'], return_tensors='pt')
 
             candidates = get_candidates(pos_tagger, data['text'])
@@ -373,7 +415,7 @@ def rank_long_documents(args, dataset, model, tokenizer):
                 if args.plm == 'BERT':
                     window = [101] + window + [102]
                     attention_mask = [1] + attention_mask + [1]
-
+                
                 window = torch.tensor([window])
                 attention_mask = torch.tensor([attention_mask])
                 # print(window.shape)
@@ -417,7 +459,17 @@ def rank_long_documents(args, dataset, model, tokenizer):
                             final_tokens_score = global_attention_scores
                         elif args.mode == 'Proportional':
                             final_tokens_score = proportional_attention_scores
-
+                        elif args.mode == 'F1':
+                            # Harmonic mean: 2ab / (a + b)
+                            numerator = 2 * global_attention_scores * proportional_attention_scores
+                            denominator = global_attention_scores + proportional_attention_scores
+                            final_tokens_score = torch.where(denominator > 0, numerator / denominator, torch.zeros_like(denominator))
+                        elif args.mode == 'Geometric':
+                            # Geometric mean: sqrt(ab) we ignore sqrt
+                            product = global_attention_scores * proportional_attention_scores
+                            final_tokens_score = product
+                        if args.mode == 'Geo':
+                            final_tokens_score = global_attention_scores + proportional_attention_scores + get_geometric_mean(attention_map)
                         for phrase in candidates_indices.keys():
                             try:
                                 phrase_indices = candidates_indices[phrase]
@@ -461,6 +513,8 @@ def rank_long_documents(args, dataset, model, tokenizer):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    def str2bool(v):
+        return v.lower() in ("yes", "true", "t", "1")
     parser.add_argument("--dataset",
                         default='Inspec',
                         type=str,
@@ -472,7 +526,7 @@ if __name__ == '__main__':
                         type=str,
                         required=True,
                         help="BERT or GPT2")
-
+        
     parser.add_argument("--mode",
                         default='Both',
                         type=str,

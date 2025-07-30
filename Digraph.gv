@@ -1,0 +1,504 @@
+digraph {
+	rankdir=TB size="8,5"
+	"building-construction projects" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">building-construction projects</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">5.265</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"extensive bulwark" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">extensive bulwark</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.237</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"extensive bulwark" -> "building-construction projects" [label="erected in"]
+	"extensive bulwark" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">extensive bulwark</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.237, 2.145</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	china [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.166</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	china -> "extensive bulwark" [label=","]
+	"ancient china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ancient china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">1.703</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	china [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.125, 0.166</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	china -> "ancient china" [label="erected in"]
+	china [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.125, 0.166, 1.484</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"great wall" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">great wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.03</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"great wall" -> china [label=of]
+	"great wall" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">great wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.03, 1.372</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	{
+	}
+	"southern mongolia" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">southern mongolia</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">5.465</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"northern china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">northern china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.096</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"northern china" -> "southern mongolia" [label=and]
+	"northern china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">northern china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.096, 3.013</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ancient china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ancient china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.194, 1.703</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ancient china" -> "northern china" [label=""]
+	"numerous walls" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">numerous walls</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">2.814</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"great wall" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">great wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.03, 0.203, 1.372</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"great wall" -> "numerous walls" [label="consists of"]
+	millennia [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">millennia</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">2.166</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ancient china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ancient china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.023, 0.194, 1.703</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ancient china" -> millennia [label=""]
+	"great wall" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1, 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">great wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.03, 0.203, 1.372, 1.981</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	china [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.124, 0.125, 0.166, 1.484</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	china -> "great wall" [label=""]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"extensive bulwark" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">extensive bulwark</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.016, 0.237, 2.145</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"extensive bulwark" -> wall [label=""]
+	{
+	}
+	"northwestern gansu province" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">northwestern gansu province</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">14.468</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"southeastern liaoning province" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">southeastern liaoning province</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.299</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"southeastern liaoning province" -> "northwestern gansu province" [label=of]
+	"southeastern liaoning province" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">southeastern liaoning province</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.299, 5.523</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	dandong [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">dandong</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.169</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	dandong -> "southeastern liaoning province" [label=","]
+	"best-preserved version" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">best-preserved version</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">4.613</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"great wall" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1, 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">great wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.03, 0.203, 0.219, 1.372, 1.981</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"great wall" -> "best-preserved version" [label=""]
+	jiuquan [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">jiuquan</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">3.922</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"southeastern liaoning province" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">southeastern liaoning province</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.038, 0.299, 5.523</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"southeastern liaoning province" -> jiuquan [label=pass]
+	dandong [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">dandong</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.169, 3.069</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"southern mongolia" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">southern mongolia</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.079, 5.465</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"southern mongolia" -> dandong [label=""]
+	"ming dynasty" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ming dynasty</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ancient china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 1:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ancient china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.023, 0.024, 0.194, 1.703</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ancient china" -> "ming dynasty" [label=""]
+	{
+	}
+	"mountain ridges" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">mountain ridges</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">6.49</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"natural barriers" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">natural barriers</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.025</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"natural barriers" -> "mountain ridges" [label="such as"]
+	"natural barriers" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">natural barriers</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.025, 4.612</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.113, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> "natural barriers" [label="snakes across"]
+	"one-fourth" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">one-fourth</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">4.513</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	crestlines [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">crestlines</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.119</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	crestlines -> "one-fourth" [label="snakes across"]
+	"chinese countryside" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">chinese countryside</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">2.192</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"northern china" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">northern china</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.029, 0.096, 3.013</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"northern china" -> "chinese countryside" [label=""]
+	crestlines [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">crestlines</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.119, 1.863</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.113, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> crestlines [label=to]
+	{
+	}
+	moats [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 5:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">moats</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">7.869</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	ditches [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 5:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ditches</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.041</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	ditches -> moats [label=or]
+	ditches [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 5:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ditches</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.041, 3.816</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.061, 0.113, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> ditches [label=","]
+	percent [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 5:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">percent</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">3.137</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"natural barriers" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 4:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">natural barriers</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.025, 0.04, 4.612</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"natural barriers" -> percent [label=""]
+	"total length" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 5:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">total length</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">2.882</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.061, 0.113, 0.295, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> "total length" [label=""]
+	stretches [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 5:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">stretches</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">2.796</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.033, 0.061, 0.113, 0.295, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> stretches [label=with]
+	{
+	}
+	"remarkable structures" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">remarkable structures</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">4.258</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.033, 0.061, 0.113, 0.228, 0.295, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> "remarkable structures" [label="have disappeared"]
+	"lengthy sections" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">lengthy sections</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">2.192</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.033, 0.061, 0.113, 0.182, 0.228, 0.295, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> "lengthy sections" [label=""]
+	ruins [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ruins</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">1.022</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ming dynasty" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 3:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">ming dynasty</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.008, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"ming dynasty" -> ruins [label=""]
+	length [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">length</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.729</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 2:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">wall</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.02, 0.033, 0.061, 0.113, 0.172, 0.182, 0.228, 0.295, 101.0</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	wall -> length [label=""]
+	earth [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">earth</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.589</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"remarkable structures" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">remarkable structures</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.002, 4.258</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"remarkable structures" -> earth [label=on]
+	{
+	}
+	"unesco world heritage site" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 7:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">unesco world heritage site</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">11.753</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"remarkable structures" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD><FONT COLOR="red" POINT-SIZE="8">sentence 6:</FONT></TD></TR>
+            <TR><TD><FONT COLOR="blue" POINT-SIZE="16">remarkable structures</FONT></TD></TR>
+            <TR><TD><FONT COLOR="red" POINT-SIZE="6">0.002, 0.297, 4.258</FONT></TD></TR>
+        </TABLE>
+    > shape=box]
+	"remarkable structures" -> "unesco world heritage site" [label=""]
+	{
+	}
+}

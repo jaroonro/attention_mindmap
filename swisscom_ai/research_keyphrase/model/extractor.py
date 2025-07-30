@@ -25,7 +25,30 @@ NP:
 GRAMMAR_FR = """  NP:
         {<NN.*|JJ>*<NN.*>+<JJ>*}  # Adjective(s)(optional) + Noun(s) + Adjective(s)(optional)"""
 
+vp_grammar = """
+    VP:
+        # Verb-related patterns
+        {<VB.*><IN|LESS>}             # Verb + preposition (e.g., consist of)
+        {<VB.*><VB.*>}                # Verb + verb (e.g., is running)
+        {<VB.*>}                      # Single verb
+        {<VB.*><RP>}                  # Verb + particle (e.g., give up)
+        {<VB.*><RP><IN|LESS>}         # Verb + particle + preposition
 
+        
+        # Adjective + other tags
+        {<JJ.*><IN|LESS>}             # Adjective + preposition (e.g., similar to)
+        {<JJ.*><RP>}                  # Adjective + particle
+        {<JJ.*><TO>}                  # Adjective + 'to'
+        {<JJ.*><CC>}                  # Adjective + coordinating conjunction
+        {<JJ.*><LESS>}                # Adjective + Stanford LESS tag
+
+        # Standalone prepositions
+        {<IN|LESS>}                   # Prepositions (e.g., in, on, of)
+        {<TO>}                        # 'to' as preposition
+
+        # Conjunctions
+        {<CC>}                        # Coordinating conjunction (e.g., and, but)
+"""
 def get_grammar(lang):
     if lang == 'en':
         grammar = GRAMMAR_EN
@@ -76,6 +99,45 @@ def extract_candidates(text_obj, no_subset=False, repeat=False):
 
     return keyphrase_candidate
 
+def extract_verb_candidates(text_obj, no_subset=False, repeat=False):
+    """
+    Extract verb phrase candidates based on part of speech tagging.
+    :param text_obj: Input text Representation with pos_tagged attribute and lang
+    :param no_subset: if True, remove candidates that are subsets of others
+    :param repeat: if True, return repeated candidates, else unique only
+    :return: list of verb phrase candidates (strings)
+    """
+
+    if repeat:
+        vp_candidates = []
+    else:
+        vp_candidates = set()
+
+    vp_parser = nltk.RegexpParser(vp_grammar)
+
+    # Parse sentences
+    trees = vp_parser.parse_sents(text_obj.pos_tagged)
+
+    for tree in trees:
+        for subtree in tree.subtrees(filter=lambda t: t.label() == 'VP'):
+            phrase = ' '.join(word for word, tag in subtree.leaves())
+            if repeat:
+                vp_candidates.append(phrase)
+            else:
+                vp_candidates.add(phrase)
+
+    # Filter long phrases (optional)
+    if repeat:
+        vp_candidates = [vp for vp in vp_candidates if len(vp.split()) <= 5]
+    else:
+        vp_candidates = {vp for vp in vp_candidates if len(vp.split()) <= 5}
+
+    if no_subset:
+        vp_candidates = unique_ngram_candidates(vp_candidates)
+    else:
+        vp_candidates = list(vp_candidates)
+
+    return vp_candidates
 
 def extract_sent_candidates(text_obj):
     """
